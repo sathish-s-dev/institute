@@ -3,11 +3,12 @@ import businessSvg from "../../assets/business.svg";
 const Hero = () => {
   return (
     <section className="">
-      <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between max-w-screen-xl">
-        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          <h1 className="text-5xl font-bold leading-none sm:text-6xl text-slate-900">
-            Ac mattis
-            <span className="dark:text-emerald-500">senectus</span>erat pharetra
+      <div className="container flex flex-col justify-center p-6 pt-24 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between max-w-screen-xl">
+        <div className="flex flex-col justify-center p-6 py-12 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <h1 className="text-4xl font-bold leading-none sm:text-6xl text-slate-900">
+            The Path to
+            <span className="dark:text-emerald-500"> Success </span>
+            starts here.
           </h1>
           <p className="mt-6 mb-8 text-lg sm:mb-12 text-slate-700">
             Dictum aliquam porta in condimentum ac integer
@@ -20,14 +21,14 @@ const Hero = () => {
               href="#"
               className="px-8 py-3 text-lg font-semibold rounded dark:bg-default-600 dark:text-slate-900"
             >
-              Suspendisse
+              Free Demo
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
               className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 text-slate-900"
             >
-              Malesuada
+              Get Started
             </a>
           </div>
         </div>
