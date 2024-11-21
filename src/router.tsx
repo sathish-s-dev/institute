@@ -1,7 +1,8 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/footer";
-import Home from "./components/Home/Home";
+import Home from "./components/Home";
+import { CourseHighlights } from "./components/CourseHighlights";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <div>Blog</div>,
+      },
+      {
+        path: "/course-highlights",
+        element: <CourseHighlights />,
       },
     ],
   },

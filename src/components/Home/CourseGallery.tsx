@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { coursesData } from "../CourseHighlights";
 
 const CoursesSection = () => {
   return (
@@ -11,14 +12,9 @@ const CoursesSection = () => {
           <Link to={"/all-courses"}>Explore</Link>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
+          {coursesData.map((item, index) => (
+            <CourseCard key={item.id} item={item} index={index} />
+          ))}
         </div>
       </div>
     </section>
@@ -27,34 +23,49 @@ const CoursesSection = () => {
 
 export default CoursesSection;
 
-function CourseCard() {
+function CourseCard({
+  index,
+  item,
+}: {
+  index: number;
+  item: {
+    id: number;
+    title: string;
+    description: string;
+    buttonText: string;
+    image: string;
+  };
+}) {
   return (
-    <a href="#" className="group relative block bg-black max-h-64 h-[250px]">
+    <Link
+      to={`/course-highlights?courseId=${index + 1}`}
+      className="group relative block bg-black max-h-64 h-[200px] rounded-xl overflow-clip hover:scale-105 transition-transform duration-300"
+    >
       <img
         alt=""
-        src="/29.jpeg"
-        className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        src={item.image}
+        className="absolute inset-0 h-full w-full object-cover opacity-50 transition-opacity duration-300 group-hover:opacity-30"
       />
 
-      <div className="relative p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full">
+      <div className="relative p-4 sm:p-6 lg:p-4 flex flex-col justify-between h-full">
         <div>
           <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
             Developer
           </p>
 
           <p className="text-xl font-bold text-slate-200 sm:text-2xl">
-            Tony Wayne
+            {item.title}
           </p>
         </div>
 
         <div className="">
           <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-sm text-slate-300">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            <p className="text-sm text-slate-300 line-clamp-2">
+              {item.description}
             </p>
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
