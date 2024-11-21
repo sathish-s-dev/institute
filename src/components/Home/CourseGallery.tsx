@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { coursesData } from "../CourseHighlights";
+import { coursesData } from "../../constants";
 
 const CoursesSection = () => {
   return (

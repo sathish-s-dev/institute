@@ -24,19 +24,19 @@ const CourseHighlights = (): ReactNode => {
 
   return (
     <div className="flex-1 bg-white text-slate-900 py-20 flex flex-col justify-start items-start gap-2 w-full">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col gap-6 relative">
-        <div className="h-full absolute top-0 -left-6">
+      <div className="mx-auto max-w-7xl px-10 lg:px-8 w-full flex flex-col gap-6 relative">
+        <div className="h-full absolute top-0 md:-left-6 left-1">
           <button
             onClick={() => {
               router(-1);
             }}
-            className="text-red-100 size-8 bg-slate-900 flex items-center justify-center sticky top-20 -left-4 p-2"
+            className="text-red-100 size-8 bg-slate-900 flex items-center justify-center sticky top-20 md:-left-4 p-2"
           >
             <img src={arrowLeft} alt="back" className="w-4" />
           </button>
         </div>
         <div>
-          <img src={course?.image} alt="" />
+          <img src={course?.image} alt="" className="w-full" />
         </div>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <p className="text-xl text-red-900">Course Highlights</p>
