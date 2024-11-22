@@ -1,17 +1,13 @@
+import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/sri lalitha v2.png";
+
 const Header = () => {
   return (
-    <nav className="bg-slate-950/20 backdrop-blur-2xl fixed w-full top-0 z-50">
+    <nav className="bg-slate-100/50 backdrop-blur-2xl fixed w-full top-0 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-slate-900">
-            Flowbite
-          </span>
-        </a>
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={logo} className="h-8" alt="Flowbite Logo" />
+        </Link>
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
@@ -29,8 +25,8 @@ const Header = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
@@ -39,13 +35,17 @@ const Header = () => {
         <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-slate-900 bg-emerald-700 rounded md:bg-transparent md:text-emerald-700 md:p-0 md:dark:text-emerald-500 dark:bg-emerald-600 md:dark:bg-transparent hover:text-emerald-700 "
+              <NavLink
+                to={"/"}
+                className={({ isActive }) => {
+                  return `block py-2 px-3 text-slate-900 bg-emerald-700 rounded md:bg-transparent ${
+                    isActive ? "md:text-emerald-600" : ""
+                  } md:p-0 dark:bg-emerald-600 md:dark:bg-transparent hover:text-emerald-700 `;
+                }}
                 aria-current="page"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
               <button
@@ -63,8 +63,8 @@ const Header = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     strokeWidth="2"
                     d="m1 1 4 4 4-4"
                   />

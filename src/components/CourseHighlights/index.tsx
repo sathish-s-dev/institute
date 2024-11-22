@@ -24,7 +24,7 @@ const CourseHighlights = (): ReactNode => {
 
   return (
     <div className="flex-1 bg-white text-slate-900 py-20 flex flex-col justify-start items-start gap-2 w-full">
-      <div className="mx-auto max-w-7xl px-10 lg:px-8 w-full flex flex-col gap-6 relative">
+      <div className="mx-auto max-w-7xl px-0 lg:px-6 w-full flex flex-col gap-6 relative pt-10 md:pt-0">
         <div className="h-full absolute top-0 md:-left-6 left-1">
           <button
             onClick={() => {
@@ -36,9 +36,9 @@ const CourseHighlights = (): ReactNode => {
           </button>
         </div>
         <div>
-          <img src={course?.image} alt="" className="w-full" />
+          <img src={course?.image} alt="" className="w-full max-w-2xl rounded-none md:rounded-xl" />
         </div>
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto max-w-2xl lg:mx-0 pl-4 md:pl-0">
           <p className="text-xl text-red-900">Course Highlights</p>
           <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-3xl"></h2>
           <p className="mt-4 text-gray-500">{course?.description}</p>

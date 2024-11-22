@@ -39,7 +39,7 @@ function CourseCard({
   return (
     <Link
       to={`/course-highlights?courseId=${index + 1}`}
-      className="group relative block bg-black max-h-64 h-[200px] rounded-xl overflow-clip hover:scale-105 transition-transform duration-300"
+      className="group relative block bg-black max-h-64 h-[230px] rounded-xl overflow-clip hover:scale-105 transition-transform duration-300"
     >
       <img
         alt=""
@@ -49,7 +49,7 @@ function CourseCard({
 
       <div className="relative p-4 sm:p-6 lg:p-4 flex flex-col justify-between h-full">
         <div>
-          <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+          <p className="text-sm font-medium uppercase tracking-widest text-orange-500">
             Developer
           </p>
 
