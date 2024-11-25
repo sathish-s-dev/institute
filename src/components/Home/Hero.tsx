@@ -12,9 +12,8 @@ const Hero = () => {
             starts here.
           </h1>
           <p className="mt-6 mb-8 text-lg sm:mb-12 text-slate-700">
-            Dictum aliquam porta in condimentum ac integer
-            <br className="hidden md:inline lg:hidden" />
-            turpis pulvinar, est scelerisque ligula sem
+            Empowering Your Future with Cutting-Edge SkillsEmpowering Your
+            Future with Cutting-Edge Skills
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
             <Link

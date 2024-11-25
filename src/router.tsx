@@ -1,8 +1,9 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/footer";
-import Home from "./components/Home";
-import { CourseHighlights } from "./components/CourseHighlights";
+import Home from "./pages/Home";
+import { CourseHighlights } from "./pages/CourseHighlights";
+import Contact from "./pages/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <div>Contact</div>,
+        element: <Contact />,
       },
       {
         path: "/blog",

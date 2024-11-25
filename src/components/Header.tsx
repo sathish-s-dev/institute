@@ -5,7 +5,10 @@ const Header = () => {
   return (
     <nav className="bg-slate-100/50 backdrop-blur-2xl fixed w-full top-0 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link
+          to="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <img src={logo} className="h-8" alt="Flowbite Logo" />
         </Link>
         <button
@@ -53,7 +56,7 @@ const Header = () => {
                 data-dropdown-toggle="dropdownNavbar"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 md:w-auto dark:text-slate-900 md:dark:hover:text-emerald-500 dark:focus:text-slate-900 dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                Dropdown{" "}
+                Courses{" "}
                 <svg
                   className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
@@ -114,28 +117,20 @@ const Header = () => {
               </div>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-slate-900 md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-slate-900 md:dark:hover:bg-transparent"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-slate-900 md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-slate-900 md:dark:hover:bg-transparent"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-slate-900 md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-slate-900 md:dark:hover:bg-transparent"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

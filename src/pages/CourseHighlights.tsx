@@ -1,10 +1,8 @@
 import { ReactNode } from "react";
-import arrowLeft from "../../assets/arrow-left.svg";
+import arrowLeft from "../assets/arrow-left.svg";
 // import { router } from "../../router";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { coursesData } from "../../constants";
-
-
+import { coursesData } from "../constants";
 
 const CourseHighlights = (): ReactNode => {
   const router = useNavigate();
@@ -36,7 +34,11 @@ const CourseHighlights = (): ReactNode => {
           </button>
         </div>
         <div>
-          <img src={course?.image} alt="" className="w-full max-w-2xl rounded-none md:rounded-xl" />
+          <img
+            src={course?.image}
+            alt=""
+            className="w-full max-w-2xl rounded-none md:rounded-xl"
+          />
         </div>
         <div className="mx-auto max-w-2xl lg:mx-0 pl-4 md:pl-0">
           <p className="text-xl text-red-900">Course Highlights</p>

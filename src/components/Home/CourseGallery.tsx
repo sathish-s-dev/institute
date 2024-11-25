@@ -1,7 +1,33 @@
 import { Link } from "react-router-dom";
 import { coursesData } from "../../constants";
+import {
+  IoCalculator,
+  IoAccessibility,
+  IoAirplane,
+  IoGameController,
+} from "react-icons/io5";
+
+import {
+  AiOutlineRadarChart,
+  AiOutlineCompass,
+  AiFillAlipayCircle,
+  AiOutlineAlignLeft,
+} from "react-icons/ai";
+
+import { ReactNode } from "react";
 
 const CoursesSection = () => {
+  const icons = [
+    <IoCalculator size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <AiOutlineCompass size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <AiFillAlipayCircle size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <AiOutlineRadarChart size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <AiOutlineAlignLeft size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <IoAirplane size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <IoAccessibility size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+    <IoGameController size={80}  className="group-hover:text-orange-400 text-orange-200 group-hover:scale-105"/>,
+  ];
+
   return (
     <section className="text-slate-900 py-12">
       <div className="container flex flex-col justify-center p-4 mx-auto max-w-screen-xl gap-6">
@@ -11,9 +37,14 @@ const CoursesSection = () => {
           </h3>
           <Link to={"/all-courses"}>Explore</Link>
         </div>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 place-items-center">
           {coursesData.map((item, index) => (
-            <CourseCard key={item.id} item={item} index={index} />
+            <CourseCard
+              key={item.id}
+              item={item}
+              index={index}
+              icon={icons[index]}
+            />
           ))}
         </div>
       </div>
@@ -23,11 +54,9 @@ const CoursesSection = () => {
 
 export default CoursesSection;
 
-function CourseCard({
-  index,
-  item,
-}: {
+type CourseCardProps = {
   index: number;
+  icon: ReactNode;
   item: {
     id: number;
     title: string;
@@ -35,37 +64,24 @@ function CourseCard({
     buttonText: string;
     image: string;
   };
-}) {
+};
+
+function CourseCard({ index, item, icon }: CourseCardProps) {
   return (
     <Link
       to={`/course-highlights?courseId=${index + 1}`}
-      className="group relative block bg-black max-h-64 h-[230px] rounded-xl overflow-clip hover:scale-105 transition-transform duration-300"
+      className="group relative bg-white bg-blend-hue w-full gap-4 flex flex-col p-4 sm:p-6 lg:p-6   max-w-[300px] justify-center items-center hover:shadow-[4px_4px_25px_-10px_rgba(251,146,60,0.5)] rounded-xl overflow-clip "
     >
-      <img
-        alt=""
-        src={item.image}
-        className="absolute inset-0 h-full w-full object-cover opacity-50 transition-opacity duration-300 group-hover:opacity-30"
-      />
+      {/* <img
+        alt={item.title}
+        src={"/icons/edit-icon.png"}
+        className=" max-w-28 w-full object-cover group-hover:scale-105  transition-transform duration-300 "
+      /> */}
 
-      <div className="relative p-4 sm:p-6 lg:p-4 flex flex-col justify-between h-full">
-        <div>
-          <p className="text-sm font-medium uppercase tracking-widest text-orange-500">
-            Developer
-          </p>
-
-          <p className="text-xl font-bold text-slate-200 sm:text-2xl">
-            {item.title}
-          </p>
-        </div>
-
-        <div className="">
-          <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-sm text-slate-300 line-clamp-2">
-              {item.description}
-            </p>
-          </div>
-        </div>
-      </div>
+      {icon}
+      <p className="text-sm font-medium uppercase tracking-widest text-center text-slate-900">
+        {item.title}
+      </p>
     </Link>
   );
 }
