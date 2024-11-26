@@ -9,6 +9,10 @@ const MobileMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="relative md:hidden">
       <div className="flex items-center justify-between p-4">
@@ -44,24 +48,28 @@ const MobileMenu = () => {
           <Link
             to="/"
             className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            onClick={handleCloseMenu}
           >
             Home
           </Link>
           <Link
-            to="/about"
+            to="/insurance"
             className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            onClick={handleCloseMenu}
           >
-            About
+            Insurance
           </Link>
           <Link
-            to="/services"
+            to="/loans"
             className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            onClick={handleCloseMenu}
           >
-            Services
+            Loans
           </Link>
           <Link
             to="/contact"
             className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            onClick={handleCloseMenu}
           >
             Contact
           </Link>
