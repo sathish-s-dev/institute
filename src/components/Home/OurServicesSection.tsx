@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import { coursesData } from "../../constants";
 import {
   AiFillAlipayCircle,
@@ -16,36 +16,36 @@ import {
 const OurServicesSection = () => {
   const icons = [
     <IoCalculator
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <AiOutlineCompass
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <AiFillAlipayCircle
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <AiOutlineRadarChart
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <AiOutlineAlignLeft
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <IoAirplane
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <IoAccessibility
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
     <IoGameController
-      size={150}
-      className="hover:text-emerald-300 text-emerald-200 group-hover:scale-105"
+      size={100}
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
     />,
   ];
 
@@ -53,6 +53,8 @@ const OurServicesSection = () => {
     <section className="text-slate-900 py-12">
       <div className="container flex flex-col justify-center p-4 mx-auto max-w-screen-xl gap-6">
         <div className="flex gap-4 flex-col justify-between">
+        <ScrollRestoration storageKey="scroll" />
+
           <h3 className="text-slate-900 text-2xl md:text-5xl font-black text-center capitalize w-full">
             Our Services
           </h3>
@@ -66,10 +68,10 @@ const OurServicesSection = () => {
           {coursesData.map((item, index) => (
             <Link
               to={`/course-highlights?courseId=${item.id}`}
-              key={index + "-" + item.title}
-              className="bg-white hover:shadow-xl hover:text-emerald-400 text-emerald-200 max-w-sm flex flex-col gap-2 transition-shadow duration-500 rounded-xl  overflow-hidden"
+              key={index + "-" + item.title + "dogo"}
+              className="bg-white group hover:shadow-xl hover:text-emerald-400 border text-emerald-200 max-w-xs md:max-w-sm flex flex-col gap-2 transition-shadow duration-500 rounded-xl  overflow-hidden"
             >
-              <div className="">
+              <div className="flex flex-col">
                 {icons[index]}
                 <div className="p-4 relative ">
                   <h4 className="absolute left-0 -top-10 px-8 py-1.5 bg-emerald-700 text-white z-[1]">

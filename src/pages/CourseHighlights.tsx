@@ -1,7 +1,12 @@
 import { ReactNode } from "react";
 import arrowLeft from "../assets/arrow-left.svg";
 // import { router } from "../../router";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import {
+  ScrollRestoration,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
+import { courseHighlightsImages } from "../assets/course-highlights";
 import { coursesData } from "../constants";
 
 const CourseHighlights = (): ReactNode => {
@@ -20,10 +25,15 @@ const CourseHighlights = (): ReactNode => {
   const course = coursesData.find((course) => course.id === +courseId);
   console.log(course);
 
+  if (!course?.image) {
+    return null;
+  }
+
   return (
-    <div className="flex-1 bg-white text-slate-900 py-20 flex flex-col justify-start items-start gap-2 w-full">
-      <div className="mx-auto max-w-7xl px-0 lg:px-6 w-full flex flex-col gap-6 relative pt-10 md:pt-0">
-        <div className="h-full absolute top-0 md:-left-6 left-1">
+    <div className="flex-1 mx-auto bg-white text-slate-900 py-20 flex flex-col relative justify-start items-start gap-2 w-full">
+      <div className="mx-auto max-w-4xl px-0 lg:px-6 w-full flex flex-col gap-6 pt-10 md:pt-0">
+        <div className="h-full absolute top-0 md:left-6 left-1">
+          <ScrollRestoration storageKey="scroll" />
           <button
             onClick={() => {
               router(-1);
@@ -33,11 +43,12 @@ const CourseHighlights = (): ReactNode => {
             <img src={arrowLeft} alt="back" className="w-4" />
           </button>
         </div>
-        <div>
+        <div className="flex flex-col gap-4 ">
+          <h1 className="text-3xl md:text-4xl font-semibold px-4 md:px-0">{course.title}</h1>
           <img
-            src={course?.image}
+            src={courseHighlightsImages.tableauBg}
             alt=""
-            className="w-full max-w-2xl rounded-none md:rounded-xl"
+            className="w-full max-h-80 object-cover max-w-2xl rounded-none md:rounded-xl"
           />
         </div>
         <div className="mx-auto max-w-2xl lg:mx-0 pl-4 md:pl-0">
@@ -47,14 +58,16 @@ const CourseHighlights = (): ReactNode => {
 
           <p className="py-2 text-red-900 text-xl">Course Details</p>
 
-          <div className="flex gap-4 max-w-xs w-fit p-4 border rounded-lg">
+          <div className="flex gap-4 max-w-sm w-fit p-4 border rounded-lg">
             <div className="flex flex-col gap-2">
               <p>Duration</p>
-              <p>Fee</p>
+              <p>Class Mode</p>
+              <p>Faculty</p>
             </div>
             <div className="flex flex-col gap-2">
               <p>: 6 Months</p>
-              <p>: 25,000</p>
+              <p>: Online / Offline</p>
+              <p>: 8 - 10 years of experience</p>
             </div>
           </div>
 

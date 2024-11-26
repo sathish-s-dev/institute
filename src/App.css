@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+  scrollbar-width: 0;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
 .scroll-snap-x {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -9,4 +19,59 @@
   color: #fcd186;
 }
 
+.slide {
+  animation: slide 120s linear backwards;
+}
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 
+.text-bg-gradient {
+  background: radial-gradient( #fcd186, #ab3300, #f00, #0d0082, #00c8ff, #007b52, #160e00);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: bgGradientAnimation 60s ease infinite;
+}
+
+@keyframes bgGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.text-bg-gradient {
+  background: linear-gradient(90deg, #50c878, #3ba272, #2e8b57, #1f6653, #134e4a, #50c878);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: bgGradientAnimation 8s ease infinite;
+}
+
+@keyframes bgGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  

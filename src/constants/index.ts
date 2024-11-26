@@ -5,7 +5,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/tableau.jpeg",
+    image: "tableauBg",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/python.jpeg",
+    image: "pythonBg",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/web-design.jpeg",
+    image: "tableauBg"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/java.jpeg",
+    image: "tableauBg"
   },
   {
     id: 1,
@@ -37,7 +37,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/tableau.jpeg",
+    image: "tableauBg"
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/python.jpeg",
+    image: "tableauBg"
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/web-design.jpeg",
+    image: "tableauBg"
   },
   {
     id: 4,
@@ -61,6 +61,6 @@ export const coursesData = [
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
     buttonText: "Learn More",
-    image: "/java.jpeg",
+    image: "tableauBg"
   },
 ];

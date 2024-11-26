@@ -4,6 +4,8 @@ import Footer from "./components/footer";
 import Home from "./pages/Home";
 import { CourseHighlights } from "./pages/CourseHighlights";
 import Contact from "./pages/Contact";
+import Loans from "./pages/Loans";
+import Insurances from "./pages/Insurance";
 
 export const router = createBrowserRouter([
   {
@@ -29,8 +31,12 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/blog",
-        element: <div>Blog</div>,
+        path: "/loans",
+        element: <Loans />,
+      },
+      {
+        path: "/insurance",
+        element: <Insurances />,
       },
       {
         path: "/course-highlights",
