@@ -10,7 +10,7 @@ import {
   IoAccessibility,
   IoGameController,
 } from "react-icons/io5";
-import { useSearchParams } from "react-router-dom";
+import { ScrollRestoration, useSearchParams } from "react-router-dom";
 
 const Insurances = () => {
   const [params] = useSearchParams();
@@ -95,6 +95,7 @@ const Insurances = () => {
   return (
     <div className="bg-white text-slate-900 py-16 grid gap-6 flex-1 w-full place-items-center">
       <section className="m-4 md:m-8 dark:text-gray-800 max-w-screen-xl mx-auto">
+        <ScrollRestoration />
         <div className="container mx-auto p-4 my-6 space-y-2 text-center md:text-start">
           <h2 className="text-5xl font-bold">{service.name}</h2>
           <p className="dark:text-gray-600">{service.description}</p>

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { CgCross } from "react-icons/cg";
+import { FaCross } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +21,7 @@ const MobileMenu = () => {
       <div className="flex items-center justify-between p-4">
         <button
           onClick={toggleMenu}
-          className="text-slate-800 focus:outline-none outline-none border-none"
+          className="text-slate-800 outline-none outline-none border-none"
         >
           <svg
             className="w-6 h-6"
@@ -43,32 +46,37 @@ const MobileMenu = () => {
           animate={{ x: "-80%" }}
           exit={{ x: "-100%" }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="lg:hidden bg-slate-900 text-center absolute h-80 flex flex-col gap-6 py-6 left-0 top-12 w-64 text-white"
+          className="lg:hidden backdrop-blur-3xl bg-black z-[50] text-center w-[120vw] absolute inset-0 flex flex-col gap-6 py-6 -top-[15px] h-[110vh] text-white"
         >
+          <div className="flex justify-end px-16 py-4">
+            <button onClick={handleCloseMenu}>
+              <FaX />
+            </button>
+          </div>
           <Link
             to="/"
-            className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            className="block px-4 py-2 hover:bg-emerald-600 hover:text-white"
             onClick={handleCloseMenu}
           >
             Home
           </Link>
           <Link
             to="/insurance"
-            className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            className="block px-4 py-2 hover:bg-emerald-600 hover:text-white"
             onClick={handleCloseMenu}
           >
             Insurance
           </Link>
           <Link
             to="/loans"
-            className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            className="block px-4 py-2 hover:bg-emerald-600 hover:text-white"
             onClick={handleCloseMenu}
           >
             Loans
           </Link>
           <Link
             to="/contact"
-            className="block px-4 py-2 hover:bg-orange-600 hover:focus:text-white"
+            className="block px-4 py-2 hover:bg-emerald-600 hover:text-white"
             onClick={handleCloseMenu}
           >
             Contact
