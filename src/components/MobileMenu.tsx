@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { CgCross } from "react-icons/cg";
-import { FaCross } from "react-icons/fa";
+import { useState } from "react";
 import { FaX } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
