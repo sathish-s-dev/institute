@@ -32,7 +32,7 @@ export const coursesData = [
     image: "tableauBg",
   },
   {
-    id: 1,
+    id: 5,
     title: "Data Analysis",
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
@@ -40,7 +40,7 @@ export const coursesData = [
     image: "tableauBg",
   },
   {
-    id: 2,
+    id: 6,
     title: "Python Fullstack",
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
@@ -48,7 +48,7 @@ export const coursesData = [
     image: "tableauBg",
   },
   {
-    id: 3,
+    id: 7,
     title: "Web",
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
@@ -56,7 +56,7 @@ export const coursesData = [
     image: "tableauBg",
   },
   {
-    id: 4,
+    id: 8,
     title: "Java Fullstack",
     description:
       "This course is designed to transform you into a proficient data visualization expert, capable of turning complex data into clear and actionable insights.",
