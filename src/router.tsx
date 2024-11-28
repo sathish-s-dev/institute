@@ -6,6 +6,7 @@ import { CourseHighlights } from "./pages/CourseHighlights";
 import Contact from "./pages/Contact";
 import Loans from "./pages/Loans";
 import Insurances from "./pages/Insurance";
+import ContactSlider from "./components/ContactSlider";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
     element: (
       <div className="min-h-screen flex flex-col">
         <Header />
+        <ContactSlider />
         <Outlet />
         <Footer />
       </div>

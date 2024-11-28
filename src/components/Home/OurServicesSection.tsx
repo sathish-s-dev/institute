@@ -17,35 +17,35 @@ const OurServicesSection = () => {
   const icons = [
     <IoCalculator
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <AiOutlineCompass
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <AiFillAlipayCircle
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <AiOutlineRadarChart
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <AiOutlineAlignLeft
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <IoAirplane
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <IoAccessibility
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
     <IoGameController
       size={100}
-      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 self-center"
+      className="group-hover:text-emerald-300 text-emerald-200 group-hover:scale-105 md:self-start self-center"
     />,
   ];
 
@@ -64,7 +64,7 @@ const OurServicesSection = () => {
             Exercitationem nisi dolorem possimus
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 place-items-center">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 place-items-center md:place-items-start">
           {services.map((item, index) => (
             <Link
               to={`/${item.key}`}
@@ -73,8 +73,8 @@ const OurServicesSection = () => {
             >
               <div className="flex flex-col">
                 {icons[index]}
-                <div className="p-4 relative ">
-                  <h4 className="absolute left-0 -top-10 px-8 py-1.5 bg-emerald-700 text-white z-[1]">
+                <div className="p-4 relative flex flex-col gap-4 items-start ">
+                  <h4 className="px-8 py-1.5 bg-emerald-700 text-white z-[1]">
                     {item.name}
                   </h4>
                   <p className="text-slate-900/80 text-sm font-medium">

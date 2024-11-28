@@ -19,7 +19,7 @@ const MobileMenu = () => {
       <div className="flex items-center justify-between p-4">
         <button
           onClick={toggleMenu}
-          className="text-slate-800 outline-none outline-none border-none"
+          className="text-slate-800 outline-none border-none"
         >
           <svg
             className="w-6 h-6"

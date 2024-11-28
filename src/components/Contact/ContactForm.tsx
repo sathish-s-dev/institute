@@ -23,6 +23,16 @@ const ContactForm = () => {
         />
       </div>
       <div>
+        <label htmlFor="phone" className="text-sm">
+          Phone
+        </label>
+        <input
+          id="phone"
+          type="text"
+          className="w-full p-3 rounded dark:bg-gray-100"
+        />
+      </div>
+      <div>
         <label htmlFor="message" className="text-sm">
           Message
         </label>
